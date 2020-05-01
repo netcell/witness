@@ -288,8 +288,8 @@ export default function App() {
   const [showUI, setShowUI] = useState(true);
   const [themeDay, setThemeDay] = useState(false);
 
-  const [size, setSize] = useState(3);
-  const [loop, setLoop] = useState(300);
+  const [size, setSize] = useState(4);
+  const [loop, setLoop] = useState(1000);
   const [lineNodePositions, setLineNodePositions] = useState({});
   const [linePositions, setLinePositions] = useState({});
   const [nodePositions, setNodePositions] = useState({});
@@ -581,8 +581,8 @@ export default function App() {
                   scaleSize * ((to.row - from.row) * 60 + (selected ? 5 : 1)),
                 color: "white",
                 position: "absolute",
-                left: scaleSize * (from.col * 60 + 12),
-                top: scaleSize * (from.row * 60 + 12),
+                left: scaleSize * (from.col * 60 + 14),
+                top: scaleSize * (from.row * 60 + 14),
                 transition: "all ease 0.2s",
                 // border: `2px #fff solid`,
                 // boxShadow: themeDay
@@ -602,8 +602,8 @@ export default function App() {
               width: scaleSize * 5,
               height: scaleSize * 5,
               position: "absolute",
-              left: scaleSize * (current.col * 60 + 13),
-              top: scaleSize * (current.row * 60 + 13),
+              left: scaleSize * (current.col * 60 + 14),
+              top: scaleSize * (current.row * 60 + 14),
               transition: "all ease 0.2s",
               transform: "scale(3)",
               // border: `2px #888 solid`,
@@ -625,11 +625,11 @@ export default function App() {
               width: scaleSize * 20,
               height: scaleSize * 20,
               position: "absolute",
-              left: scaleSize * (endLine.point.col * 60 + 5),
-              top: scaleSize * (endLine.point.row * 60 + 5),
+              left: scaleSize * (endLine.point.col * 60 + 6.5),
+              top: scaleSize * (endLine.point.row * 60 + 6.5),
               transition: "all ease 0.2s",
               transform: "scale(1)",
-              border: `1px #fff solid`,
+              border: `3px #fff solid`,
               // boxShadow: themeDay
               //   ? "0 0 10px 1px rgba(0, 0, 0, 0.1)"
               //   : "0 0 10px 10px rgba(0, 0, 0, 0.5)",
